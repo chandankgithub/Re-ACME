@@ -1,0 +1,38 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h4>{{pageTitle}}</h4>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-2"> Filter By: </div>
+            <div class="col-md-4">
+                <input type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table">
+                    <th>
+                        <button type="button" class="btn btn-primary"  (click) = 'showImageClick()'> {{showHideButtonText}} Images </button>
+                    </th>
+                    <th>Product</th>
+                    <th>Code</th>
+                    <th>Available</th>
+                    <th>Price</th>
+                    <th>5 Star Rating</th>
+
+                    <tr *ngFor='let product of products'> 
+                        <td> <img [src]='[product.imageUrl]' [width]='[width]' height={{height}} *ngIf='showImage'/> </td>
+                        <td> {{product.productName}} </td>
+                        <td> {{product.productCode}} </td>
+                        <td> Available </td>
+                        <td> {{product.price}} </td>
+                        <td> {{product.starRating}} </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>
