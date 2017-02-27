@@ -12,7 +12,8 @@ import 'rxjs/add/observable/throw';
 @Component({
     selector: 'product-list',
     moduleId: module.id,
-    templateUrl: 'product-listing.component.html'
+    templateUrl: 'product-listing.component.html',
+
 })
 export class ProductListingComponent implements OnInit {
     private pageTitle: string = `Product List`;
@@ -20,6 +21,7 @@ export class ProductListingComponent implements OnInit {
     height: number = 30;
     showHideButtonText: string='Show';
     showImage: boolean = true;
+    filterBy: string;
     
     private products: IProduct[]
 
