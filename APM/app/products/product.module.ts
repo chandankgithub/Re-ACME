@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {CommonModule} from '@angular/common';
+import {ProductListingService} from './product-listing.service';
 
 import {ProductListingComponent} from './product-listing.component'
 @NgModule({
@@ -12,7 +13,7 @@ import {ProductListingComponent} from './product-listing.component'
     ],
     exports:[RouterModule],
     declarations:[ProductListingComponent],
-    providers:[],
+    providers:[ProductListingService],
     bootstrap:[]
 })
 export class ProductModule{
